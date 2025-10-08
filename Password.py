@@ -1,7 +1,7 @@
 
 x = input().strip()
 
-if x.isalnum() == False:
+if not x.isalnum():
     print('Just words and numbers')
 
 elif len(x) < 1 :

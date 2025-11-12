@@ -3,7 +3,7 @@ from os import system
 
 while True:
     x = input('Timer app\n1)start timer\t2)stopwatch\t  3)exit timer\n')
-    if x.lower() == '1':
+    if x == '1':
         h = int(input("Enter hours:"))
         m = int(input("Enter minutes:"))
         sec = int(input("Enter seconds:"))
@@ -18,7 +18,7 @@ while True:
             sleep(1)
             total -= 1
             system('clear')
-    elif x.lower() == '2':
+    elif x == '2':
         h = int(input("Enter hours:"))
         m = int(input("Enter minutes:"))
         sec = int(input("Enter seconds:"))
@@ -32,7 +32,7 @@ while True:
             sleep(1)
             system('clear')
             i += 1
-    elif x.lower() == '3':
+    elif x == '3':
         print('Exiting',end = '')
         sleep(0.25)
         for i in range(3):

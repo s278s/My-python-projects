@@ -4,10 +4,10 @@ x = input('Enter the first subject name: ')
 f = input(f'Enter the {x} mark')
 
 y = input('Enter the second subject name : ')
-r = input(f'Enter the {x} mark')
+r = input(f'Enter the {y} mark')
 
 z = input('Enter the last subject name: ')
-a = input(f"Enter the {x} mark")
+a = input(f"Enter the {z} mark")
 
 m = [f'average{round((int(f) + int(r) + int(a)) / 3,2)}']
 

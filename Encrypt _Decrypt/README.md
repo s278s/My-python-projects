@@ -7,3 +7,4 @@ Features
   User can choose the desired password length
 
 It is good.
+still needs more Features which I'll add soon.

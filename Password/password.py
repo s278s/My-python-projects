@@ -1,46 +1,45 @@
+def check_password():
+    while True:
+        x = input('enter your password: ')
+        if len(x) < 4:
+            print('at least enter 4 characters')
+            continue
+
+        if not x.isalnum():
+            print('just enter only alphanumeric characters')
+            continue
+
+        else:
+            print('your password is set')
+            break
+    return x
+
+
 i = 0
-
-
-x = input('set your password').strip()
-
+print('first of all,set your password')
+password_user = check_password()
 
 while True:
-    password = input('Enter your password').strip()
-
-    if len(password) == 0:
-        print('You must at least enter a character')
-
-    elif password != x:
-        print('Password is wrong')
-        i += 1
-        print(f'you entered {i} times wrong password')
+    password = check_password()
+    if password != password_user:
+        print('password is wrong')
+        i = i + 1
 
     else:
-        print('_____Password is correct_____')
+        print('password is correct')
         break
 
     if i % 3 == 0:
-        y = input('wanna change your password?\n1)Yes\t2)No')
-
         while True:
-            if y == '1':
-                new_password = input('Enter your new password').strip()
-
-                if len(new_password) != 4:
-                    print('You must enter 4 numbers ')
-
-                if not new_password.isalnum():
-                    print('Just words and numbers')
-                    continue
-
-                else:
-                    print('Your password changed successfully')
-                    i = 0
-                    x = new_password
-                    break
-
-            if y == '2':
+            choice = input('wanna change your password? y/n')
+            if choice == 'y':
+                password_user = check_password()
+                password = password_user
+                print('you changed your password')
+                i = 0
                 break
 
-            else:
-                print('Wrong option')
+            elif choice == 'n':
+                break
+
+            print('please enter y or n')
